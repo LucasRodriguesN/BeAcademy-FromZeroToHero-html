@@ -1,0 +1,120 @@
+<!--
+    Block content (div)
+    *action
+    *method (GET - padrão)
+-->
+<form action="" method="post" enctype="multipart/form-data"><!--aoto a receber arquivos-->
+    <fieldset name="contato" form="">
+        <legend>Preencha o formulário de contato</legend>
+    </fieldset>
+
+    <!--Button, submit: com o formulário todo cadastrado ele vai disparar para o banco,
+    reset: ele vai limpar todos os campos do formulário, button: recebe um name ou id em regras de negocío-->
+    <button type="button">Enviar</button>
+<br>
+    <!--Label
+        *Associar e identificar um ou mais tag de entrada de dados
+        *Ajuda bastante na acessibilidade
+
+        Atributos:
+        for
+        *Usado para fazer a conexão com outros tipos de elementos de formulários
+    -->
+
+    <label>
+        Nome:
+        <input type="text" id="nome">
+    </label>
+<br>
+<!--datelist
+    *Lista de valores com sugestão para algum elemento input
+    *Usuário poderá selecionar um dos valores ou colocar novos valores
+-->
+<!--Lista de professores-->
+<details id="prof-list">
+    <option>Lucas</option>
+    <option>Juan</option>
+    <option>Regis</option>
+</details>
+
+<input type="text" list="prof-list" placeholder="Escolha seu professor">
+
+<fieldset>
+    <legend>Trabalhando com inputs</legend>
+
+    <input type="text"
+    placeholder="Preencha o seu nome"
+    size="60"
+    minlength="10"
+    maxlength="40"
+    title="Preencha o dado"
+    required
+    >
+    <!--Input number-->
+    <input
+    type="number"
+    size="50"
+    minlength="6"
+    maxlength="12"
+    title="Preencha o dado">
+
+    <!--Input hidden-->
+    <input type="hidden" value="Eu estou escondido">
+
+    <!--Input date-->
+    <input type="date">
+
+     <!--Input type=check (Checkbox)-->
+     <label for="area">
+        Seu interesse maior é por qual área?
+     </label>
+
+     <div>
+        <input type="checkbox" name="interesse" id="frontend" value="Front-end"> 
+        <label for="frontend"> Front-end</label>
+
+        <input type="checkbox" name="interesse" id="backend" value="Back-end"> 
+        <label for="backend"> Back-end</label>
+
+        <input type="checkbox" name="interesse" id="designuiux" value="Design UI/UX"> 
+        <label for="designuiux"> Design UI/UX</label>
+
+     </div>
+
+</fieldset>
+<br>
+<!--
+    SELECT
+    Elemento de formulário capaz de criar uma lista de opções a serem selecionadas, DropDown
+-->
+<label for="teacher">professores</label>
+<select name="select-teacher" id="teacher" multiple size="4">
+    <option value="">Selecione um professor</option>
+    <option value="Luan">Luan</option>
+    <option value="Regis">Regis</option>
+</select>
+
+<br>
+<input
+type="search"
+name=""
+title=""
+placeholder="Faça uma pesquisa"
+size="24"
+>
+<br>
+<!--
+    Manipulando arquivos com file
+    *usuário poderá fazer um upload de 1 mais arquivos de acordo com a extensão
+-->
+<input
+type="file"
+value=""
+accept="image/*"
+name=""
+id=""
+>
+
+
+
+</form>
